@@ -1075,6 +1075,16 @@ define Device/hilink_hlk-7621a-evb
 endef
 TARGET_DEVICES += hilink_hlk-7621a-evb
 
+define Device/resolut_nar
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  DEVICE_VENDOR := Resolut
+  DEVICE_MODEL := Resolut NAR
+  DEVICE_PACKAGES += kmod-mt76x2 kmod-usb3
+  IMAGE_SIZE := 32448k
+endef
+TARGET_DEVICES += resolut_nar
+
 define Device/hiwifi_hc5962
   $(Device/nand)
   $(Device/uimage-lzma-loader)

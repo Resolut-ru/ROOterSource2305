@@ -456,9 +456,9 @@ return view.extend({
 
 		if (netifdVersion && netifdVersion[1] >= "2021-05-26") {
 			if (this.interfaceBridgeWithIfnameSections().length)
-				return this.handleBridgeMigration();
+				return this.renderBridgeMigration();
 			else if (this.deviceWithIfnameSections().length || this.interfaceWithIfnameSections().length)
-				return this.handleIfnameMigration();
+				return this.renderIfnameMigration();
 		}
 
 		var dslModemType = data[0],
